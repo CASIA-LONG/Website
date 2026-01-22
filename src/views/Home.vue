@@ -9,7 +9,7 @@
     <section class="group-profile">
       <div class="group-content">
         <div class="group-image">
-          <img src="../../group-profile.jpg" alt="Group Profile" />
+          <img src="/group-profile.jpg" alt="Group Profile" />
         </div>
         <div class="group-about">
           <h2>About the Group</h2>
