@@ -3,7 +3,6 @@
     <section class="hero">
       <div class="hero-content">
         <h1>Welcome to XXX Lab</h1>
-        <p>ABC</p>
       </div>
     </section>
     <section class="group-profile">
@@ -13,17 +12,37 @@
         </div>
         <div class="group-about">
           <h2>About the Group</h2>
-          <p>abc</p>
+          <p>
+            At RobotiXX lab, researchers (XX-Men) and robots (XX-Bots) perform robotics research at the intersection of motion planning and machine learning with a specific focus on robustly deployable field robotics. Our research goal is to develop highly capable and intelligent mobile robots that are robustly deployable in the real world with minimal human supervision. XX-Men have vast experience deploying XX-Bots to tackle real-world problems in the field, building advanced robot platforms, developing complex sensing and actuation systems, designing sophisticated motion planning algorithms, and setting up standardized testbeds and metrics in order to create highly capable and intelligent robots to locomote on land, in air, and at sea.
+          </p>
         </div>
       </div>
     </section>
     <section class="news">
       <h2>News</h2>
-      <p>abc</p>
+      <ul>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+      </ul>
     </section>
     <section class="in-press">
       <h2>In Press</h2>
-      <p>abc</p>
+      <ul>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+      </ul>
     </section>
   </div>
 </template>

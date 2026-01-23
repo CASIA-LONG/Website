@@ -1,60 +1,121 @@
 <template>
   <div class="team">
     <h1>Our Team</h1>
-    <div class="team-list">
-      <div class="team-member">
-        <div class="member-info">
-          <h2>Faculty</h2>
-          <div class="member-card">
-            <div class="member-photo">
-              <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20academic%20portrait%20of%20a%20professor&image_size=square" alt="Professor XXX">
-            </div>
-            <h3>Professor XXX</h3>
-            <p>Principal Investigator</p>
-            <p>Email: xxx@university.edu</p>
+    
+    <!-- Faculty Section -->
+    <section class="team-section">
+      <h2>Faculty</h2>
+      <div class="member-grid">
+        <div v-for="(member, index) in teamData.faculty" :key="index" class="member-card">
+          <div class="member-photo">
+            <img :src="member.photo" :alt="member.name">
+          </div>
+          <h3>{{ member.name }}</h3>
+          <p class="member-position">{{ member.position }}</p>
+          <p class="member-email">{{ member.email }}</p>
+          <p class="member-description">{{ member.description }}</p>
+          <div class="member-links">
+            <a v-if="member.links.website" :href="member.links.website" class="link" target="_blank">Website</a>
+            <a v-if="member.links.google_scholar" :href="member.links.google_scholar" class="link" target="_blank">Google Scholar</a>
+            <a v-if="member.links.github" :href="member.links.github" class="link" target="_blank">GitHub</a>
+            <a v-if="member.links.linkedin" :href="member.links.linkedin" class="link" target="_blank">LinkedIn</a>
           </div>
         </div>
       </div>
-      <div class="team-member">
-        <div class="member-info">
-          <h2>PhD Students</h2>
-          <div class="member-card">
-            <div class="member-photo">
-              <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20academic%20portrait%20of%20a%20graduate%20student&image_size=square" alt="John Doe">
-            </div>
-            <h3>John Doe</h3>
-            <p>PhD Student</p>
-            <p>Email: jdoe@university.edu</p>
+    </section>
+    
+    <!-- Researchers Section -->
+    <section class="team-section">
+      <h2>Researchers</h2>
+      <div class="member-grid">
+        <div v-for="(member, index) in teamData.researchers" :key="index" class="member-card">
+          <div class="member-photo">
+            <img :src="member.photo" :alt="member.name">
           </div>
-          <div class="member-card">
-            <div class="member-photo">
-              <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20academic%20portrait%20of%20a%20female%20graduate%20student&image_size=square" alt="Jane Smith">
-            </div>
-            <h3>Jane Smith</h3>
-            <p>PhD Student</p>
-            <p>Email: jsmith@university.edu</p>
-          </div>
-        </div>
-      </div>
-      <div class="team-member">
-        <div class="member-info">
-          <h2>Master Students</h2>
-          <div class="member-card">
-            <div class="member-photo">
-              <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20academic%20portrait%20of%20a%20young%20student&image_size=square" alt="Bob Johnson">
-            </div>
-            <h3>Bob Johnson</h3>
-            <p>Master Student</p>
-            <p>Email: bjohnson@university.edu</p>
+          <h3>{{ member.name }}</h3>
+          <p class="member-position">{{ member.position }}</p>
+          <p class="member-email">{{ member.email }}</p>
+          <p class="member-description">{{ member.description }}</p>
+          <div class="member-links">
+            <a v-if="member.links.website" :href="member.links.website" class="link" target="_blank">Website</a>
+            <a v-if="member.links.google_scholar" :href="member.links.google_scholar" class="link" target="_blank">Google Scholar</a>
+            <a v-if="member.links.github" :href="member.links.github" class="link" target="_blank">GitHub</a>
+            <a v-if="member.links.linkedin" :href="member.links.linkedin" class="link" target="_blank">LinkedIn</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    
+    <!-- PhD Students Section -->
+    <section class="team-section">
+      <h2>PhD Students</h2>
+      <div class="member-grid">
+        <div v-for="(member, index) in teamData.phd_students" :key="index" class="member-card">
+          <div class="member-photo">
+            <img :src="member.photo" :alt="member.name">
+          </div>
+          <h3>{{ member.name }}</h3>
+          <p class="member-position">{{ member.position }}</p>
+          <p class="member-email">{{ member.email }}</p>
+          <p class="member-description">{{ member.description }}</p>
+          <div class="member-links">
+            <a v-if="member.links.website" :href="member.links.website" class="link" target="_blank">Website</a>
+            <a v-if="member.links.google_scholar" :href="member.links.google_scholar" class="link" target="_blank">Google Scholar</a>
+            <a v-if="member.links.github" :href="member.links.github" class="link" target="_blank">GitHub</a>
+            <a v-if="member.links.linkedin" :href="member.links.linkedin" class="link" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Master Students Section -->
+    <section class="team-section">
+      <h2>Master Students</h2>
+      <div class="member-grid">
+        <div v-for="(member, index) in teamData.master_students" :key="index" class="member-card">
+          <div class="member-photo">
+            <img :src="member.photo" :alt="member.name">
+          </div>
+          <h3>{{ member.name }}</h3>
+          <p class="member-position">{{ member.position }}</p>
+          <p class="member-email">{{ member.email }}</p>
+          <p class="member-description">{{ member.description }}</p>
+          <div class="member-links">
+            <a v-if="member.links.website" :href="member.links.website" class="link" target="_blank">Website</a>
+            <a v-if="member.links.google_scholar" :href="member.links.google_scholar" class="link" target="_blank">Google Scholar</a>
+            <a v-if="member.links.github" :href="member.links.github" class="link" target="_blank">GitHub</a>
+            <a v-if="member.links.linkedin" :href="member.links.linkedin" class="link" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Undergraduate Students Section -->
+    <section class="team-section">
+      <h2>Undergraduate Students</h2>
+      <div class="member-grid">
+        <div v-for="(member, index) in teamData.undergraduate_students" :key="index" class="member-card">
+          <div class="member-photo">
+            <img :src="member.photo" :alt="member.name">
+          </div>
+          <h3>{{ member.name }}</h3>
+          <p class="member-position">{{ member.position }}</p>
+          <p class="member-email">{{ member.email }}</p>
+          <p class="member-description">{{ member.description }}</p>
+          <div class="member-links">
+            <a v-if="member.links.website" :href="member.links.website" class="link" target="_blank">Website</a>
+            <a v-if="member.links.google_scholar" :href="member.links.google_scholar" class="link" target="_blank">Google Scholar</a>
+            <a v-if="member.links.github" :href="member.links.github" class="link" target="_blank">GitHub</a>
+            <a v-if="member.links.linkedin" :href="member.links.linkedin" class="link" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup>
-// Team page logic
+import teamData from '../data/team.json'
 </script>
 
 <style scoped>
@@ -72,30 +133,34 @@ h1 {
   text-align: center;
 }
 
-.team-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.team-member {
-  background-color: #f9f9f9;
+.team-section {
+  margin-bottom: 3rem;
   padding: 1.5rem;
+  background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.member-info h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.team-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
   color: #333;
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.5rem;
 }
 
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
 .member-card {
   text-align: center;
-  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .member-photo {
@@ -111,12 +176,43 @@ h1 {
 
 .member-card h3 {
   font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   color: #333;
 }
 
-.member-card p {
-  margin: 0.3rem 0;
+.member-position {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.member-email {
+  margin-bottom: 1rem;
   color: #666;
+}
+
+.member-description {
+  margin-bottom: 1.5rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.member-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #004080;
+  text-decoration: underline;
 }
 </style>

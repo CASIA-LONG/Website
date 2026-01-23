@@ -81,13 +81,11 @@
 <script setup>
 import { ref } from 'vue'
 
-// 控制每个部分是否显示全部研究成果
 const showAllDataPerception = ref(false)
 const showAllPlanningControl = ref(false)
 const showAllResults = ref(false)
 const showAllApplications = ref(false)
 
-// 切换显示状态的函数
 const toggleDataPerception = () => {
   showAllDataPerception.value = !showAllDataPerception.value
 }

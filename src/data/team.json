@@ -1,0 +1,77 @@
+{
+  "faculty": [
+    {
+      "name": "Professor XXX",
+      "position": "Principal Investigator",
+      "email": "xxx@university.edu",
+      "description": "Professor XXX is the principal investigator of the lab, specializing in autonomous driving and robotics research.",
+      "photo": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20academic%20portrait%20of%20a%20professor&image_size=square",
+      "links": {
+        "website": "#",
+        "google_scholar": "#",
+        "github": "#"
+      }
+    }
+  ],
+  "researchers": [
+    {
+      "name": "Dr. John Smith",
+      "position": "Postdoctoral Researcher",
+      "email": "jsmith@university.edu",
+      "description": "Dr. Smith is a postdoctoral researcher working on computer vision for autonomous vehicles.",
+      "photo": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20academic%20portrait%20of%20a%20researcher&image_size=square",
+      "links": {
+        "google_scholar": "#",
+        "github": "#"
+      }
+    }
+  ],
+  "phd_students": [
+    {
+      "name": "John Doe",
+      "position": "PhD Student",
+      "email": "jdoe@university.edu",
+      "description": "John is a PhD student researching autonomous driving in mining environments.",
+      "photo": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20academic%20portrait%20of%20a%20graduate%20student&image_size=square",
+      "links": {
+        "github": "#",
+        "linkedin": "#"
+      }
+    },
+    {
+      "name": "Jane Smith",
+      "position": "PhD Student",
+      "email": "jsmith@university.edu",
+      "description": "Jane is a PhD student working on robotics and computer vision.",
+      "photo": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20academic%20portrait%20of%20a%20female%20graduate%20student&image_size=square",
+      "links": {
+        "github": "#",
+        "linkedin": "#"
+      }
+    }
+  ],
+  "master_students": [
+    {
+      "name": "Bob Johnson",
+      "position": "Master Student",
+      "email": "bjohnson@university.edu",
+      "description": "Bob is a master student interested in autonomous systems.",
+      "photo": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20academic%20portrait%20of%20a%20young%20student&image_size=square",
+      "links": {
+        "github": "#"
+      }
+    }
+  ],
+  "undergraduate_students": [
+    {
+      "name": "Alice Brown",
+      "position": "Undergraduate Student",
+      "email": "abrown@university.edu",
+      "description": "Alice is an undergraduate student working on robotics projects.",
+      "photo": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20academic%20portrait%20of%20a%20young%20undergraduate%20student&image_size=square",
+      "links": {
+        "github": "#"
+      }
+    }
+  ]
+}
